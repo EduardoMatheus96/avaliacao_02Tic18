@@ -73,7 +73,7 @@ class ListaDatas : public Lista, public Data {
 };
 
 class ListaSalarios : public Lista {
-	vector<float> lista;
+	vector<float> salario;
 	
 	public:
 	
