@@ -1,12 +1,11 @@
 #include "classes.hpp"
 
-void ListaNomes::entradaDeDados(){
-    string nome;
-    cout << "Digite o nome que deseja adicionar: " << endl;
-    cin.ignore();
-    getline(cin, nome);
+
+void ListaNomes::entradaDeDados(string nome){
+
     this->lista.push_back(nome);
     cout << "O nome foi cadastrado com sucesso!" << nome << endl;
+
 }
 
 void ListaNomes::mostraMediana() {
@@ -27,4 +26,28 @@ void ListaNomes::mostraMenor() {
 void ListaNomes::mostraMaior() {
     cout << "O primeiro nome encontrado na lista eh: " << this->lista[0] << endl;
     //return *max_element(this->lista.begin(), this->lista.end());
+}
+
+void ListaNomes::ordemAlfa()
+{
+    int n = this->lista.size() - 1;
+    bool trocou;
+    do
+    {
+        trocou = false;
+        for (int j = 0; j < n; j++)
+        {
+            if (this->lista.at(j) > this->lista.at(j + 1))
+            {
+                swap(this->lista[j], this->lista[j + 1]);
+                trocou = true;
+            }
+        }
+        n--;
+    } while (trocou);
+}
+
+int main(void){
+
+    
 }
