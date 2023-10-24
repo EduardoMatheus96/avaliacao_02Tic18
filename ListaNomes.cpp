@@ -28,7 +28,7 @@ void ListaNomes::mostraMaior() {
     //return *max_element(this->lista.begin(), this->lista.end());
 }
 
-void ListaNomes::ordemAlfa()
+void ListaNomes::listarEmOrdem()
 {
     int n = this->lista.size() - 1;
     bool trocou;
