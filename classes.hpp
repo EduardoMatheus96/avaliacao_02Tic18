@@ -42,6 +42,7 @@ public:
 	virtual void mostraMenor() =0;
 	virtual void mostraMaior() =0;
 	virtual void listarEmOrdem() =0;
+	virtual void listaNElementos(unsigned int n) = 0;
     
 };
 
