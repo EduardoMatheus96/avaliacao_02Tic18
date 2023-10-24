@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/home/eduardo-matheus-souto/Área de trabalho/Workspace/Segunda prova residencia/avaliacao_02Tic18",
-      "program": "/home/eduardo-matheus-souto/Área de trabalho/Workspace/Segunda prova residencia/avaliacao_02Tic18/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/Wilton/Desktop/Residencia TIC18/Arquivos do Portal TIC18/Avaliação/avaliação 2/avaliacao_02Tic18",
+      "program": "c:/Users/Wilton/Desktop/Residencia TIC18/Arquivos do Portal TIC18/Avaliação/avaliação 2/avaliacao_02Tic18/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
