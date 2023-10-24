@@ -1,13 +1,12 @@
 #include "classes.hpp"
 
-void entradaDeDados(int idade)
+void ListaIdades::entradaDeDados(int idade)
 {
     this->lista.push_back(idade);
-    cin >> idade;
     cout << "Aqui vai mostrar a entrada de dados" << idade << endl;
 }
 
-void mostraMediana()
+void ListaIdades::mostraMediana()
 /*criar uma função para mostrar a mediana*/
 {
     vector<int> _lista = this->lista;
@@ -25,12 +24,12 @@ void mostraMediana()
         }
 }
 
-void mostraMenor()
+void ListaIdades::mostraMenor()
 {
     cout << "A menor idade eh" << *min_element(this->lista.begin(), this->lista.end()) << endl;
 }
 
-void mostraMaior()
+void ListaIdades::mostraMaior()
 {
     cout << "A maior idade eh " << *max_element(this->lista.begin(), this->lista.end()) << endl;
 }
