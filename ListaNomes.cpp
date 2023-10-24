@@ -46,8 +46,3 @@ void ListaNomes::ordemAlfa()
         n--;
     } while (trocou);
 }
-
-int main(void){
-
-    
-}
