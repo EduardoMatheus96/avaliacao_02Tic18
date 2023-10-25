@@ -1,7 +1,11 @@
 #include "classes.hpp";
+#include <sstream>
 
 Data::Data(int _dia, int _mes, int _ano)
 {
+    this->dia = _dia;
+    this->mes = _mes;
+    this->ano = _ano;
 }
 int Data::compara(Data d1, Data d2)
 {
@@ -44,5 +48,24 @@ int Data::compara(Data d1, Data d2)
 
 string Data::toString()
 {
-    return to_string(dia) + "/" + to_string(mes) + "/" + to_string(ano);
+    return to_string(this->dia) + "/" + to_string(this->mes) + "/" + to_string(this->ano);
+}
+
+static Data Data::fromData(string data)
+{
+
+    istringstream ss(data);
+    string dia, mes, ano;
+
+    getline(ss, dia, '/');
+    getline(ss, mes, '/');
+    getline(ss, ano);
+
+    int diaInt = stoi(dia);
+    int mesInt = stoi(mes);
+    int anoInt = stoi(ano);
+
+    Data d(diaInt, mesInt, anoInt);
+
+    return d;
 }
