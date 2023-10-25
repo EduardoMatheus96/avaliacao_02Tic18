@@ -73,9 +73,10 @@ class ListaDatas : public Lista, public Data {
 };
 
 class ListaSalarios : public Lista {
-	vector<float> lista;
+	vector<float> salario;
 	
 	public:
+	
 	
 	/*
 	O m�todo abaixo pergunta ao usu�rios quantos
