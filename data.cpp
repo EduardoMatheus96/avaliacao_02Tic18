@@ -1,11 +1,11 @@
 #include "classes.hpp";
 #include <sstream>
 
-Data::Data(int _dia, int _mes, int _ano)
+Data::Data(int dia, int mes, int ano)
 {
-    this->dia = _dia;
-    this->mes = _mes;
-    this->ano = _ano;
+    this->dia = dia;
+    this->mes = mes;
+    this->ano = ano;
 }
 int Data::compara(Data d1, Data d2)
 {

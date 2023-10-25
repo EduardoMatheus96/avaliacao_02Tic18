@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/home/eduardo/Área de Trabalho/workspace/avaliacao_02Tic18",
-      "program": "/home/eduardo/Área de Trabalho/workspace/avaliacao_02Tic18/build/Debug/outDebug",
+      "program": "/home/eduardo/Área de Trabalho/workspace/avaliacao_02Tic18/build/Release/outRelease",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

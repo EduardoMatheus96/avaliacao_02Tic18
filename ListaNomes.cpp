@@ -1,31 +1,33 @@
 #include "classes.hpp"
 
+void ListaNomes::entradaDeDados(const string &dado)
+{
 
-void ListaNomes::entradaDeDados(string nome){
-
-    this->lista.push_back(nome);
-    cout << "O nome foi cadastrado com sucesso!" << nome << endl;
-
+    this->lista.push_back(dado);
+    cout << "O nome foi cadastrado com sucesso!" << dado << endl;
 }
 
-void ListaNomes::mostraMediana() {
+void ListaNomes::mostraMediana()
+{
     int tamanho = 0;
     tamanho = this->lista.size();
     tamanho /= 2;
-    
-        cout << "O nome no meio da lista eh: " << this->lista[tamanho] << endl;
+
+    cout << "O nome no meio da lista eh: " << this->lista[tamanho] << endl;
 }
 
-void ListaNomes::mostraMenor() {
+void ListaNomes::mostraMenor()
+{
     int tamanho = 0;
     tamanho = this->lista.size();
-    cout << "O ultimo nome encontrado na lista eh: " << this->lista[tamanho-1] << endl;
-    //return *min_element(this->lista.begin(), this->lista.end());
+    cout << "O ultimo nome encontrado na lista eh: " << this->lista[tamanho - 1] << endl;
+    // return *min_element(this->lista.begin(), this->lista.end());
 }
 
-void ListaNomes::mostraMaior() {
+void ListaNomes::mostraMaior()
+{
     cout << "O primeiro nome encontrado na lista eh: " << this->lista[0] << endl;
-    //return *max_element(this->lista.begin(), this->lista.end());
+    // return *max_element(this->lista.begin(), this->lista.end());
 }
 
 void ListaNomes::listarEmOrdem()
@@ -45,4 +47,24 @@ void ListaNomes::listarEmOrdem()
         }
         n--;
     } while (trocou);
+    for (auto &&i : this->lista)
+    {
+        cout << i << endl;
+    }
+}
+
+void ListaNomes::listaNElementos(unsigned int n)
+{
+    // listarEmOrdem();
+    unsigned int limite = 0;
+    for (auto &&i : this->lista)
+    {
+        if (limite < n)
+        {
+            cout << i << endl;
+            limite++;
+        }
+        else
+            break;
+    }
 }
