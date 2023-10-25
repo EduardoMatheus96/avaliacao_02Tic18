@@ -25,8 +25,5 @@ void ListaSalarios::mostraMaior() {
 }
 
 void ListaSalarios::listarEmOrdem() {
-    sort(this->salario.begin(), this->salario.end());
-    for (float sal : this->salario) {
-    cout << sal << " ";
-    }
+    sort(this->salario.begin(), this->salario.end());  
 }

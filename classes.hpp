@@ -76,9 +76,7 @@ class ListaSalarios : public Lista {
 	vector<float> salario;
 	
 	public:
-	    ListaSalarios() {
-        lista.clear();
-    }
+	
 	
 	/*
 	O m�todo abaixo pergunta ao usu�rios quantos
