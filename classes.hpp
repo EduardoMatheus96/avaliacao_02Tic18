@@ -8,8 +8,6 @@
 
 using namespace std;
 
-
-
 class Data
 {
 private:
@@ -43,6 +41,8 @@ public:
 	virtual void mostraMediana() =0;
 	virtual void mostraMenor() =0;
 	virtual void mostraMaior() =0;
+	virtual void listarEmOrdem() =0;
+	virtual void listaNElementos(unsigned int n) = 0;
     
 };
 
