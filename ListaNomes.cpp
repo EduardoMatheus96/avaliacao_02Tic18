@@ -47,11 +47,15 @@ void ListaNomes::listarEmOrdem()
         }
         n--;
     } while (trocou);
+    for (auto &&i : this->lista)
+    {
+        cout << i << endl;
+    }
 }
 
 void ListaNomes::listaNElementos(unsigned int n)
 {
-    listarEmOrdem();
+    // listarEmOrdem();
     unsigned int limite = 0;
     for (auto &&i : this->lista)
     {

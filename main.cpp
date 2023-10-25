@@ -13,6 +13,9 @@ int main() {
 	listaDeNomes.entradaDeDados("Welvis");
 	listaDeNomes.entradaDeDados("Breno");
 
+	// Lista todos os nomes me ordem alfabetica
+	listaDeNomes.listarEmOrdem();
+
 	// Testando Metodo listaNElementos
 	listaDeNomes.listaNElementos(2);
 

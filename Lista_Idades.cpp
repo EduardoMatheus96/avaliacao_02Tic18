@@ -37,11 +37,16 @@ void ListaIdades::mostraMaior()
 
 void ListaIdades::listarEmOrdem() {
     sort(this->lista.begin(), this->lista.end());  
+    for (auto &&i : this->lista)
+    {
+
+        cout << i << endl;
+    }
 }
 
 void ListaIdades::listaNElementos(unsigned int n)
 {
-    listarEmOrdem();
+    // listarEmOrdem();
     unsigned int limite = 0;
     for (auto &&i : this->lista)
     {
