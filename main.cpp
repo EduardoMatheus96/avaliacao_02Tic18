@@ -44,7 +44,11 @@ int main() {
 
 	listaDeListas.push_back(&listaDeIdades);
 	
-
+	for (Lista* l : listaDeListas) {
+		l->mostraMediana();
+		l->mostraMenor();
+		l->mostraMaior();
+	}
 
     return 0;
 }
