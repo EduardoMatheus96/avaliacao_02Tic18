@@ -1,7 +1,8 @@
 #include "classes.hpp"
 
-void ListaSalarios::entradaDeDados(float sal){
-    this->salario.push_back(sal);
+void ListaSalarios::entradaDeDados(const string& dado){
+    double valor = stof(dado);
+    this->salario.push_back(valor);
 }
 
 void ListaSalarios::mostraMediana() {
@@ -26,4 +27,20 @@ void ListaSalarios::mostraMaior() {
 
 void ListaSalarios::listarEmOrdem() {
     sort(this->salario.begin(), this->salario.end());  
+}
+
+void ListaSalarios::listaNElementos(unsigned int n)
+{
+    listarEmOrdem();
+    unsigned int limite = 0;
+    for (auto &&i : this->salario)
+    {
+        if (limite < n)
+        {
+            cout << i << endl;
+            limite++;
+        }
+        else
+            break;
+    }
 }

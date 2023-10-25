@@ -1,7 +1,8 @@
 #include "classes.hpp"
 
-void ListaIdades::entradaDeDados(int idade)
+void ListaIdades::entradaDeDados(const string& dado)
 {
+    int idade = stoi(dado);
     this->lista.push_back(idade);
     cout << "Aqui vai mostrar a entrada de dados" << idade << endl;
 }
@@ -13,8 +14,8 @@ void ListaIdades::mostraMediana()
     sort(_lista.begin(), _lista.end());
     size_t tamanho = _lista.size();
 
-    if tamanho
-        % 2 == 0
+    if (tamanho
+        % 2 == 0)
         {
             cout << "Aqui vai mostrar a mediana da lista de idades" << (_lista[tamanho / 2 - 1] + _lista[tamanho / 2]) / 2.0 << endl;
         }
@@ -32,4 +33,24 @@ void ListaIdades::mostraMenor()
 void ListaIdades::mostraMaior()
 {
     cout << "A maior idade eh " << *max_element(this->lista.begin(), this->lista.end()) << endl;
+}
+
+void ListaIdades::listarEmOrdem() {
+    sort(this->lista.begin(), this->lista.end());  
+}
+
+void ListaIdades::listaNElementos(unsigned int n)
+{
+    listarEmOrdem();
+    unsigned int limite = 0;
+    for (auto &&i : this->lista)
+    {
+        if (limite < n)
+        {
+            cout << i << endl;
+            limite++;
+        }
+        else
+            break;
+    }
 }

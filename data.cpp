@@ -1,7 +1,10 @@
 #include "classes.hpp";
 
-Data::Data(int _dia, int _mes, int _ano)
+Data::Data(int dia, int mes, int ano)
 {
+    this->dia = dia;
+    this->mes = mes;
+    this->ano = ano;
 }
 int Data::compara(Data d1, Data d2)
 {
