@@ -4,25 +4,25 @@ void ListaDatas::entradaDeDados(Data data)
 {
     this->lista.push_back(data);
 }
-Data ListaDatas::mostraMediana(vector<Data> datas)
+Data ListaDatas::mostraMediana()
 {
     // Classifica o vetor de datas em ordem crescente
-    std::sort(datas.begin(), datas.end(), Data::compara);
+    std::sort(this->lista.begin(), this->lista.end(), Data::compara);
 
     // Calcula o tamanho do vetor
-    int tamanho = datas.size();
+    int tamanho = this->lista.size();
 
     // Retorna a mediana, caso seja par, retorna o extremo da esquerda
-    return datas[tamanho / 2];
+    return this->lista[tamanho / 2];
 }
-Data ListaDatas::mostraMenor(vector<Data> datas)
+Data ListaDatas::mostraMenor()
 {
 
     // Inicializa a data mínima com a primeira data do vetor
-    Data menorData = datas[0];
+    Data menorData = this->lista[0];
 
     // Percorre o vetor de datas para encontrar a menor data
-    for (const Data &data : datas)
+    for (const Data &data : this->lista)
     {
         if (Data::compara(data, menorData) < 0)
         {
@@ -32,12 +32,12 @@ Data ListaDatas::mostraMenor(vector<Data> datas)
 
     return menorData;
 }
-Data ListaDatas::mostraMaior(vector<Data> datas)
+Data ListaDatas::mostraMaior()
 {
-    Data maiorData = datas[0];
+    Data maiorData = this->lista[0];
 
     // Percorre o vetor de datas para encontrar a maior data
-    for (const Data &data : datas)
+    for (const Data &data : this->lista)
     {
         if (Data::compara(data, maiorData) > 0)
         {
@@ -46,4 +46,14 @@ Data ListaDatas::mostraMaior(vector<Data> datas)
     }
 
     return maiorData;
+}
+
+void ListaDatas::listarEmOrdem()
+{
+    std::sort(this->lista.begin(), this->lista.end(), Data::compara);
+
+    for (const Data &data : this->lista)
+    {
+        cout << data.dia << "/" << data.mes << "/" << data.ano << endl;
+    }
 }
