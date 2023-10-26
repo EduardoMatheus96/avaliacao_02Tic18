@@ -2,8 +2,10 @@
 
 void ListaSalarios::entradaDeDados(const string &dado)
 {
-    double valor = stof(dado);
+    float valor = stof(dado);
     this->salario.push_back(valor);
+    cout << "O salario foi cadastrado com sucesso!" << endl;
+
 }
 
 void ListaSalarios::mostraMediana()

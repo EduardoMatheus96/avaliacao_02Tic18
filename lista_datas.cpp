@@ -88,4 +88,6 @@ void ListaDatas::adicionaViaTeclado(ListaDatas& value){
     Data data(dia, mes, ano);
 
     value.entradaDeDados(data.toString());
+    cout << "A data foi cadastrada com sucesso!" << endl;
+
 }

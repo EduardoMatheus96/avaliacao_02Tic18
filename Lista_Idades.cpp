@@ -4,7 +4,8 @@ void ListaIdades::entradaDeDados(const string& dado)
 {
     int idade = stoi(dado);
     this->lista.push_back(idade);
-    cout << "Aqui vai mostrar a entrada de dados" << idade << endl;
+    cout << "A idade foi cadastrada com sucesso!" << endl;
+
 }
 
 void ListaIdades::mostraMediana()
