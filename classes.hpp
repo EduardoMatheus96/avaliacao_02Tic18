@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <map>
 
 using namespace std;
 
@@ -56,7 +57,8 @@ public:
 	void mostraMenor() override;
 	void mostraMaior() override;
 	void listarEmOrdem() override;
-	void listaNElementos(unsigned int n);
+	void listaNElementos(unsigned int n) override;
+	void adicionaViaTeclado(ListaNomes& value);
 };
 
 class ListaDatas : public Lista
@@ -75,6 +77,7 @@ public:
 	void mostraMaior() override;
 	void listarEmOrdem() override;
 	void listaNElementos(unsigned int n);
+	void adicionaViaTeclado(ListaDatas& value);
 };
 
 class ListaSalarios : public Lista
@@ -92,7 +95,8 @@ public:
 	void mostraMenor() override;
 	void mostraMaior() override;
 	void listarEmOrdem() override;
-	void listaNElementos(unsigned int n);
+	void listaNElementos(unsigned int n)override;
+	void adicionaViaTeclado(ListaSalarios& value);
 };
 
 class ListaIdades : public Lista
@@ -110,7 +114,10 @@ solicita a digita��o de cada um deles
 	void mostraMenor() override;
 	void mostraMaior() override;
 	void listarEmOrdem() override;
-	void listaNElementos(unsigned int n);
+	void listaNElementos(unsigned int n) override;
+	void adicionaViaTeclado(ListaIdades& value);
 };
+
+void menu();
 
 #endif

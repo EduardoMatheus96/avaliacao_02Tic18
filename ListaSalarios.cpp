@@ -14,22 +14,30 @@ void ListaSalarios::mostraMediana()
 
     if (tamanho % 2 == 0)
     {
-        (copiaSalarios[tamanho / 2 - 1] + copiaSalarios[tamanho / 2]) / 2.0;
+        cout << "A Mediana dos salarios eh: " 
+            << ((copiaSalarios[tamanho / 2 - 1] + copiaSalarios[tamanho / 2]) / 2.0)
+            << endl;
     }
     else
     {
-        copiaSalarios[tamanho / 2];
+        cout << "A Mediana dos salarios eh: " 
+            << copiaSalarios[tamanho / 2]
+            << endl;
     }
 }
 
 void ListaSalarios::mostraMenor()
 {
-    *min_element(this->salario.begin(), this->salario.end());
+    cout << "O menor salario eh: " 
+        << *min_element(this->salario.begin(), this->salario.end())
+        << endl;
 }
 
 void ListaSalarios::mostraMaior()
 {
-    *max_element(this->salario.begin(), this->salario.end());
+    cout << "O maior salario eh: " 
+        << *max_element(this->salario.begin(), this->salario.end())
+        << endl;
 }
 
 void ListaSalarios::listarEmOrdem()
@@ -56,4 +64,13 @@ void ListaSalarios::listaNElementos(unsigned int n)
         else
             break;
     }
+}
+
+void ListaSalarios::adicionaViaTeclado(ListaSalarios& value){
+    string context;
+    cout << "Insira o salario para adicionar a lista: ";
+    // getline(cin, context);
+    cin >> context;
+    cout << endl;
+    value.entradaDeDados(context);
 }

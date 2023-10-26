@@ -4,7 +4,7 @@ void ListaNomes::entradaDeDados(const string &dado)
 {
 
     this->lista.push_back(dado);
-    cout << "O nome foi cadastrado com sucesso!" << dado << endl;
+    cout << "O nome foi cadastrado com sucesso!" << endl;
 }
 
 void ListaNomes::mostraMediana()
@@ -67,4 +67,13 @@ void ListaNomes::listaNElementos(unsigned int n)
         else
             break;
     }
+}
+
+void ListaNomes::adicionaViaTeclado(ListaNomes& value){
+    string nome;
+    cout << "Insira um nome para adicionar a lista: ";
+    // getline(cin, nome);
+    cin >> nome;
+    cout << endl;
+    value.entradaDeDados(nome);
 }

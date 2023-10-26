@@ -73,3 +73,19 @@ void ListaDatas::listaNElementos(unsigned int n)
         }
     }
 }
+
+void ListaDatas::adicionaViaTeclado(ListaDatas& value){
+    int dia, mes, ano;
+	ListaDatas listaDeDatas;
+    cout << "Informe o dia: ";
+    cin >> dia;
+    cout << "\nInforme o mes: ";
+    cin >> mes;
+    cout << "\nInforme o ano (aaaa): ";
+    cin >> ano;
+    cout << endl;
+    
+    Data data(dia, mes, ano);
+
+    value.entradaDeDados(data.toString());
+}

@@ -57,10 +57,6 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "files.associations": {
     "ostream": "cpp",
-    "deque": "cpp",
-    "string": "cpp",
-    "vector": "cpp",
     "iostream": "cpp"
-  },
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  }
 }

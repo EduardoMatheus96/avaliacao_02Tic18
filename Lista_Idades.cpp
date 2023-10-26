@@ -59,3 +59,12 @@ void ListaIdades::listaNElementos(unsigned int n)
             break;
     }
 }
+
+void ListaIdades::adicionaViaTeclado(ListaIdades& value){
+    string context;
+    cout << "Insira a idade para adicionar a lista: ";
+    // getline(cin, context);
+    cin >> context;
+    cout << endl;
+    value.entradaDeDados(context);
+}
