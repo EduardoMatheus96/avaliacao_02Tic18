@@ -1,6 +1,6 @@
 ### avaliacao_02Tic18
 ***
-#### **Histórico do projeto:**
+#### **Histórico do projeto - Minhas contribuições**
 
 > *Implementação da subclasse ListaIdades.*
 
