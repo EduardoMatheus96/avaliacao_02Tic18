@@ -1,59 +1,75 @@
-// #include "classes.hpp";
+#include "classes.hpp";
 
-// void ListaDatas::entradaDeDados(Data data)
-// {
-//     this->lista.push_back(data);
-// }
-// Data ListaDatas::mostraMediana()
-// {
-//     // Classifica o vetor de datas em ordem crescente
-//     sort(this->lista.begin(), this->lista.end(), Data::compara);
+void ListaDatas::entradaDeDados(const string &dado)
+{
+    this->lista.push_back(dado);
+}
 
-//     // Calcula o tamanho do vetor
-//     int tamanho = this->lista.size();
+void ListaDatas::mostraMediana()
+{
+    // Classifica o vetor de datas em ordem crescente
+    sort(this->lista.begin(), this->lista.end());
 
-//     // Retorna a mediana, caso seja par, retorna o extremo da esquerda
-//     return this->lista[tamanho / 2];
-// }
-// Data ListaDatas::mostraMenor()
-// {
+    // Calcula o tamanho do vetor
+    int tamanho = this->lista.size();
 
-//     // Inicializa a data mínima com a primeira data do vetor
-//     Data menorData = this->lista[0];
+    // Retorna a mediana, caso seja par, retorna o extremo da esquerda
 
-//     // Percorre o vetor de datas para encontrar a menor data
-//     for (const Data &data : this->lista)
-//     {
-//         if (Data::compara(data, menorData) < 0)
-//         {
-//             menorData = data;
-//         }
-//     }
+    cout << "Mediana: " << this->lista[(tamanho / 2) - 1] << endl;
+}
+void ListaDatas::mostraMenor()
+{
 
-//     return menorData;
-// }
-// Data ListaDatas::mostraMaior()
-// {
-//     Data maiorData = this->lista[0];
+    // Inicializa a data mínima com a primeira data do vetor
+    string menorData = this->lista[0];
 
-//     // Percorre o vetor de datas para encontrar a maior data
-//     for (const Data &data : this->lista)
-//     {
-//         if (Data::compara(data, maiorData) > 0)
-//         {
-//             maiorData = data;
-//         }
-//     }
+    // Percorre o vetor de datas para encontrar a menor data
+    for (const string &data : this->lista)
+    {
+        if (Data::compara(data, menorData) < 0)
+        {
+            menorData = data;
+        }
+    }
+    cout << "Menor data da lista: " << menorData << endl;
+}
+void ListaDatas::mostraMaior()
+{
+    string maiorData = this->lista[0];
 
-//     return maiorData;
-// }
+    // Percorre o vetor de datas para encontrar a maior data
+    for (const string &data : this->lista)
+    {
+        if (Data::compara(data, maiorData) > 0)
+        {
+            maiorData = data;
+        }
+    }
 
-// void ListaDatas::listarEmOrdem()
-// {
-//     sort(this->lista.begin(), this->lista.end(), Data::compara);
+    cout << "Maior data da lista: " << maiorData << endl;
+}
 
-//     for (const Data &data : this->lista)
-//     {
-//         cout << data.dia << "/" << data.mes << "/" << data.ano << endl;
-//     }
-// }
+void ListaDatas::listarEmOrdem()
+{
+    sort(this->lista.begin(), this->lista.end());
+
+    for (const string &data : this->lista)
+    {
+        cout << data << endl;
+    }
+}
+
+void ListaDatas::listaNElementos(unsigned int n)
+{
+    int limite = 0;
+
+    for (const string &data : this->lista)
+    {
+        cout << data << endl;
+        limite++;
+        if (limite == n)
+        {
+            break;
+        }
+    }
+}

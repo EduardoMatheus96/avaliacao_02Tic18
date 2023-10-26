@@ -7,8 +7,30 @@ Data::Data(int dia, int mes, int ano)
     this->mes = mes;
     this->ano = ano;
 }
-int Data::compara(Data d1, Data d2)
+Data Data::fromData(string data)
 {
+
+    istringstream ss(data);
+    string dia, mes, ano;
+
+    getline(ss, dia, '/');
+    getline(ss, mes, '/');
+    getline(ss, ano);
+
+    int diaInt = stoi(dia);
+    int mesInt = stoi(mes);
+    int anoInt = stoi(ano);
+
+    Data d(diaInt, mesInt, anoInt);
+
+    return d;
+}
+
+int Data::compara(string d1_s, string d2_s)
+{
+
+    Data d1 = Data::fromData(d1_s);
+    Data d2 = Data::fromData(d2_s);
 
     if (d1.ano < d2.ano)
     {
@@ -49,23 +71,4 @@ int Data::compara(Data d1, Data d2)
 string Data::toString()
 {
     return to_string(this->dia) + "/" + to_string(this->mes) + "/" + to_string(this->ano);
-}
-
-static Data Data::fromData(string data)
-{
-
-    istringstream ss(data);
-    string dia, mes, ano;
-
-    getline(ss, dia, '/');
-    getline(ss, mes, '/');
-    getline(ss, ano);
-
-    int diaInt = stoi(dia);
-    int mesInt = stoi(mes);
-    int anoInt = stoi(ano);
-
-    Data d(diaInt, mesInt, anoInt);
-
-    return d;
 }

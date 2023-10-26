@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/eduardo/Área de Trabalho/workspace/avaliacao_02Tic18",
-      "program": "/home/eduardo/Área de Trabalho/workspace/avaliacao_02Tic18/build/Release/outRelease",
+      "cwd": "/home/welvis/Documentos/Residencia/avaliacao_02Tic18",
+      "program": "/home/welvis/Documentos/Residencia/avaliacao_02Tic18/build/Release/outRelease",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

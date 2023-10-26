@@ -15,7 +15,7 @@ private:
 	int dia, mes, ano;
 
 public:
-	Data() = default;
+	Data();
 	Data(Data &&) = default;
 	Data(int dia, int mes, int ano);
 	Data(const Data &) = default;
@@ -23,8 +23,9 @@ public:
 	Data &operator=(const Data &) = default;
 	~Data() = default;
 
-	static int compara(Data d1, Data d2);
+	static int compara(string d1_s, string d2_s);
 	string toString();
+	static Data fromData(string data);
 };
 
 class Lista
@@ -60,22 +61,23 @@ public:
 	void listaNElementos(unsigned int n);
 };
 
-// class ListaDatas : public Lista
-// {
-// 	vector<Data> lista;
+class ListaDatas : public Lista
+{
+	vector<string> lista;
 
-// public:
-// 	/*
-// 	O m�todo abaixo pergunta ao usu�rios quantos
-// 	elementos v�o existir na lista e depois
-// 	solicita a digita��o de cada um deles
-// 	*/
-// 	void entradaDeDados(const string &dado) override;
-// 	void mostraMediana() override;
-// 	void mostraMenor() override;
-// 	void mostraMaior() override;
-// 	void listarEmOrdem() override;
-// };
+public:
+	/*
+	O m�todo abaixo pergunta ao usu�rios quantos
+	elementos v�o existir na lista e depois
+	solicita a digita��o de cada um deles
+	*/
+	void entradaDeDados(const string &dado) override;
+	void mostraMediana() override;
+	void mostraMenor() override;
+	void mostraMaior() override;
+	void listarEmOrdem() override;
+	void listaNElementos(unsigned int n);
+};
 
 class ListaSalarios : public Lista
 {
