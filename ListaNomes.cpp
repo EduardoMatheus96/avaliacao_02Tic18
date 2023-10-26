@@ -1,36 +1,63 @@
 #include "classes.hpp"
 
-void ListaNomes::entradaDeDados(const string &dado)
-{
 
-    this->lista.push_back(dado);
-    cout << "O nome foi cadastrado com sucesso!" << endl;
+void ListaNomes::entradaDeDados(string nome){
+
+    this->lista.push_back(nome);
+    cout << "O nome foi cadastrado com sucesso!" << nome << endl;
+
 }
 
-void ListaNomes::mostraMediana()
-{
+void ListaNomes::mostraMediana() {
     int tamanho = 0;
     tamanho = this->lista.size();
     tamanho /= 2;
-
-    cout << "O nome no meio da lista eh: " << this->lista[tamanho] << endl;
+    
+        cout << "O nome no meio da lista eh: " << this->lista[tamanho] << endl;
 }
 
 void ListaNomes::mostraMenor()
 {
-    int tamanho = 0;
-    tamanho = this->lista.size();
-    cout << "O ultimo nome encontrado na lista eh: " << this->lista[tamanho - 1] << endl;
-    // return *min_element(this->lista.begin(), this->lista.end());
-}
-
-void ListaNomes::mostraMaior()
+int n = this->lista.size() - 1;
+bool trocou;
+do
 {
-    cout << "O primeiro nome encontrado na lista eh: " << this->lista[0] << endl;
-    // return *max_element(this->lista.begin(), this->lista.end());
+    trocou = false;
+    for (int j = 0; j < n; j++)
+    {
+        if (this->lista.at(j) < this->lista.at(j + 1)) // Modificação aqui para verificar se o elemento atual é menor que o próximo
+        {
+            swap(this->lista[j], this->lista[j + 1]);
+            trocou = true;
+        }
+    }
+    n--;
+} while (trocou);
+for (auto &&i : this->lista)
+{
+    cout << i << endl;
+}
 }
 
-void ListaNomes::listarEmOrdem()
+void ListaNomes::mostraMaior() {
+    int n = this->lista.size() - 1;
+    bool trocou;
+    do
+    {
+        trocou = false;
+        for (int j = 0; j < n; j++)
+        {
+            if (this->lista.at(j) > this->lista.at(j + 1))
+            {
+                swap(this->lista[j], this->lista[j + 1]);
+                trocou = true;
+            }
+        }
+        n--;
+    } while (trocou);
+}
+
+void ListaNomes::ordemAlfa()
 {
     int n = this->lista.size() - 1;
     bool trocou;
@@ -47,33 +74,9 @@ void ListaNomes::listarEmOrdem()
         }
         n--;
     } while (trocou);
-    for (auto &&i : this->lista)
-    {
-        cout << i << endl;
-    }
 }
 
-void ListaNomes::listaNElementos(unsigned int n)
-{
-    // listarEmOrdem();
-    unsigned int limite = 0;
-    for (auto &&i : this->lista)
-    {
-        if (limite < n)
-        {
-            cout << i << endl;
-            limite++;
-        }
-        else
-            break;
-    }
-}
+int main(void){
 
-void ListaNomes::adicionaViaTeclado(ListaNomes& value){
-    string nome;
-    cout << "Insira um nome para adicionar a lista: ";
-    // getline(cin, nome);
-    cin >> nome;
-    cout << endl;
-    value.entradaDeDados(nome);
+    
 }
