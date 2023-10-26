@@ -19,6 +19,8 @@ void setupMenuColors() {
     menuColors[13] = "\033[1;96m";  // Ciano claro
     menuColors[14] = "\033[1;97m";  // Branco claro
     menuColors[15] = "\033[1;30m";  // Preto
+    menuColors[16] = "\033[1;50m";  
+    menuColors[17] = "\033[1;55m";  
     menuColors[0] = "\033[0m";      // Restaura a cor padrão
 }
 
